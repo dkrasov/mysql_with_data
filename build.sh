@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker build -t dkrasov/mysql8-with-data .
+target_registry=$1
+
+docker build -t "$target_registry" .
