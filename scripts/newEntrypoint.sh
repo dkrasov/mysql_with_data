@@ -4,10 +4,4 @@
 
 cd /
 
-# This snippet allows you to specify different datavolumes for different containers 
-sed -n -i -e '/DATADIR=/r /tmp/move_datadir_snippet' -e 1x -e '2,${x;p}' -e '${x;p}' entrypoint.sh
-
-# This snippets allow you to import a database, and also to bind to 0.0.0.0
-sed -n -i -e '/FLUSH PRIVILEGES/r /tmp/import_database_snippet' -e 1x -e '2,${x;p}' -e '${x;p}' entrypoint.sh
-
 ./entrypoint.sh mysqld
