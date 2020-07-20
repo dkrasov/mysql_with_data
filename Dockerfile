@@ -1,4 +1,4 @@
-FROM mysql
+FROM mysql:8
 MAINTAINER Pieter Smit <drakedroidapps@gmail.com>
 
 COPY scripts /tmp
